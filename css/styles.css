@@ -34,7 +34,7 @@
   --modal-btn-border-color: rgba(0, 0, 0, 0.1);
   --modal-btn-accent-fill: #ffffff;
   --border-input-color-def: rgba(33, 33, 33, 0.2);
-  --form-lable-color: #8e8f99;
+  --form-label-color: #8e8f99;
   --form-placeholder-color: rgba(117, 117, 117, 0.5);
 }
 h1,
@@ -724,13 +724,13 @@ body {
   fill: var(--accent-color);
 }
 
-.input-lable {
+.input-label {
   margin-bottom: 4px;
 
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: var(--form-lable-color);
+  color: var(--form-label-color);
 }
 .modal-field {
   margin-bottom: 8px;
@@ -759,6 +759,8 @@ body {
   background-color: transparent;
   outline: transparent;
   resize: none;
+
+  transition: 250ms var(--timeing-function);
 }
 .modal-comment::placeholder {
   font-size: 12px;
