@@ -699,8 +699,6 @@ body {
   letter-spacing: 0.02em;
   color: var(--title-color);
 }
-.modal-form {
-}
 .modal-input {
   width: 100%;
   height: 40px;
@@ -708,17 +706,23 @@ body {
   padding-bottom: 8px;
   padding-left: 38px;
   padding-right: 16px;
+
+  font-size: 12px;
+  line-height: 1.17;
+
   border-radius: 4px;
   border: 1px solid var(--border-input-color-def);
   background-color: transparent;
+  outline: transparent;
 }
-.modal-input::placeholder {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: var(--form-placeholder-color);
+.modal-input:focus {
+  border-color: var(--accent-color);
 }
-.input-text {
+.modal-input:focus + .modal-icon {
+  fill: var(--accent-color);
+}
+
+.input-lable {
   margin-bottom: 4px;
 
   font-size: 12px;
@@ -737,4 +741,27 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+.modal-comment {
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+
+  font-size: 12px;
+  line-height: 1.17;
+
+  border-radius: 4px;
+  border: 1px solid var(--border-input-color-def);
+  background-color: transparent;
+  outline: transparent;
+  resize: none;
+}
+.modal-comment::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--form-placeholder-color);
+}
+.modal-comment:focus {
+  border-color: var(--accent-color);
 }
