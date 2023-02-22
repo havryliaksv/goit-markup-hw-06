@@ -714,6 +714,8 @@ body {
   border: 1px solid var(--border-input-color-def);
   background-color: transparent;
   outline: transparent;
+
+  transition: border-color 250ms var(--timeing-function);
 }
 .modal-input:focus {
   border-color: var(--accent-color);
@@ -741,6 +743,8 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+
+  transition: fill 250ms var(--timeing-function);
 }
 .modal-comment {
   width: 100%;
