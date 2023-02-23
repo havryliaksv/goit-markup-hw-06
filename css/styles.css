@@ -36,6 +36,7 @@
   --border-input-color-def: rgba(33, 33, 33, 0.2);
   --form-label-color: #8e8f99;
   --form-placeholder-color: rgba(117, 117, 117, 0.5);
+  --checkbox-text-color: --#757575;
 }
 h1,
 h2,
@@ -232,12 +233,15 @@ body {
   color: var(--hero-btn-color);
 
   background: var(--hero-background-btn-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  transition: background 250ms var(--timeing-function);
+  transition: background 250ms var(--timeing-function),
+    box-shadow 250ms var(--timeing-function);
 }
 .hero-btn:hover,
 .hero-btn:focus {
   background: var(--accent-color);
+  box-shadow: none;
 }
 /*--------------------FEATURES-------------------------*/
 .features {
@@ -596,7 +600,9 @@ body {
 }
 .footer-content {
   display: flex;
-  gap: 120px;
+}
+.footer-left {
+  margin-right: 120px;
 }
 .soc-media-list {
   display: flex;
@@ -625,6 +631,66 @@ body {
 .soc-media-link:focus {
   background-color: var(--footer-soc-media-accent-color);
 }
+.footer-form {
+  margin-left: auto;
+}
+.input-subscribe {
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+
+  color: var(--btn-background-color);
+
+  background-color: transparent;
+
+  transition: border-color 250ms var(--timeing-function);
+}
+.input-subscribe::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.input-subscribe:focus {
+  border-color: var(--accent-color);
+}
+.btn-subscribe {
+  display: inline-flex;
+  padding: 8px 24px;
+  margin-left: 24px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--btn-accent-color);
+
+  background: var(--hero-background-btn-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: background 250ms var(--timeing-function),
+    box-shadow 250ms var(--timeing-function);
+}
+.btn-subscribe:hover,
+.btn-subscribe:focus {
+  background: var(--accent-color);
+  box-shadow: none;
+}
+.btn-subscribe::after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+
+  background-image: url(../images/subscribe.svg);
+}
+
 /*--------------------MODAL WINDOW-------------------------*/
 .backdrop {
   position: fixed;
@@ -735,6 +801,12 @@ body {
 .modal-field {
   margin-bottom: 8px;
 }
+.modal-field-textarea {
+  margin-bottom: 16px;
+}
+.modal-field-checkbox {
+  margin-bottom: 24px;
+}
 .input-wrap {
   position: relative;
 }
@@ -770,4 +842,57 @@ body {
 }
 .modal-comment:focus {
   border-color: var(--accent-color);
+}
+.input-checkbox-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--checkbox-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-checkbox-text span {
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid var(--title-color);
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: transparent; /*наслідується іконкою*/
+  transition: fill 250ms var(--timeing-function),
+    background-color 250ms var(--timeing-function),
+    border-color 250ms var(--timeing-function);
+}
+.input-checkbox-link {
+  text-decoration-line: underline;
+  color: var(--btn-color);
+}
+.input-checkbox:checked + .input-checkbox-text span {
+  background-color: var(--accent-color);
+  fill: var(--btn-background-color);
+}
+.input-checkbox:focus + .input-checkbox-text span {
+  border-color: var(--accent-color);
+}
+.btn-modal-submit {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 32px;
+  border-radius: 4px;
+
+  color: var(--hero-btn-color);
+
+  background: var(--hero-background-btn-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background 250ms var(--timeing-function),
+    box-shadow 250ms var(--timeing-function);
+}
+.btn-modal-submit:hover,
+.btn-modal-submit:focus {
+  background: var(--accent-color);
+  box-shadow: none;
 }
