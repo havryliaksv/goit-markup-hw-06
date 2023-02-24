@@ -712,7 +712,10 @@ body {
 
   width: 408px;
   min-height: 576px;
-  padding: 24px;
+  padding-top: 72px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
 
   background-color: var(--background-modal-color);
 
@@ -722,13 +725,15 @@ body {
   transform: translate(-50%, -50%) scale(1.25);
 }
 .btn-modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   width: 24px;
   height: 24px;
-  margin-left: auto;
-  margin-bottom: 24px;
   padding: 0;
 
   color: var(--modal-button-color);
@@ -791,6 +796,7 @@ body {
 }
 
 .input-label {
+  display: inline-flex;
   margin-bottom: 4px;
 
   font-size: 12px;
@@ -878,6 +884,8 @@ body {
   border-color: var(--accent-color);
 }
 .btn-modal-submit {
+  width: 169px;
+  height: 56px;
   margin-left: 50%;
   transform: translateX(-50%);
   padding: 16px 32px;
